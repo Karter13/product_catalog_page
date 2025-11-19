@@ -6,9 +6,9 @@ export default function HomePage() {
       <h1 className="text-4xl font-bold mb-6">Добро пожаловать в наш магазин!</h1>
       <Link
         href="/catalog"
-        className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+        className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 active:bg-blue-700 transition"
       >
-        Перейти к каталогу
+        Перейти в каталог
       </Link>
     </div>
   );
