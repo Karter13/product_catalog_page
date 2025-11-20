@@ -12,8 +12,17 @@ interface ProductGridProps {
 
 export const ProductGrid = ({ products: allProducts }: ProductGridProps) => {
   const { lastElementRef, getCurrentItems } = useInfiniteScroll(PAGE_SIZE);
+  const safeProducts = Array.isArray(allProducts) ? allProducts : [];
 
-  const currentProducts = getCurrentItems(allProducts);
+  const currentProducts = getCurrentItems(safeProducts);
+
+  if (safeProducts.length === 0) {
+    return (
+      <div className="p-6 text-center text-gray-500">
+        Товары не найдены
+      </div>
+    );
+  }
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
