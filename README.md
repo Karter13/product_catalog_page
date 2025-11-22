@@ -22,7 +22,7 @@
 - cd product_catalog_page
 - npm install
 
-Запуск разработки Next.js 
+Запуск приложения в режиме разработки Next.js 
 - npm run dev
 
 Сборка приложения
