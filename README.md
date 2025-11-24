@@ -1,7 +1,6 @@
 # Product Catalog Next.js
 
 Простой каталог товаров с **Next.js 16**, **TypeScript**, **TailwindCSS 4** и **shadcn/ui**.  
-Проект поддерживает Infinite Scroll, сортировку и имеет кнопку Scroll-to-Top.
 
 ---
 
