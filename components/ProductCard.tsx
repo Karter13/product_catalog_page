@@ -3,11 +3,12 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Product } from '@/data/types/product';
 import { Button } from '@/components/ui/button';
 import { StarRating } from '@/components/ui/StarRating';
 import { Skeleton } from '@/components/ui/skeleton';
+import { PAGES } from '@/config/pages.config';
 
 interface ProductCardProps {
   product: Product;
@@ -18,7 +19,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleSelect = () => {
-    router.push(`/catalog/${product.id}`);
+    router.push(PAGES.SELECTED(product.id));
   };
 
   const handleAddToCart =(e: React.MouseEvent<HTMLButtonElement>) => {

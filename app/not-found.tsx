@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { PAGES } from '@/config/pages.config';
 
 export default function NotFound() {
   return (
@@ -10,7 +11,7 @@ export default function NotFound() {
         Похоже, вы перешли по неправильному адресу или такой страницы не существует.
       </p>
 
-      <Link href="/catalog">
+      <Link href={PAGES.CATALOG}>
         <Button className="mt-4 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white cursor-pointer">
           Вернуться в каталог
         </Button>

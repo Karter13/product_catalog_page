@@ -8,9 +8,10 @@ import { StarRating } from '@/components/ui/StarRating';
 import { Button } from '@/components/ui/button';
 import { products } from '@/data/products';
 import { ProductNotFound } from '@/components/ProductNotFound';
+import { PAGES } from '@/config/pages.config';
 
 export const SelectedCard = () => {
-  const params = useParams();
+  const params = useParams<{id: string}>();
   const id = Number(params.id);
 
   const product = products.find((p) => p.id === id);
@@ -71,7 +72,7 @@ export const SelectedCard = () => {
         </Card>
 
 
-        <Link href="/catalog" className="w-full max-w-lg">
+        <Link href={PAGES.CATALOG} className="w-full max-w-lg">
           <Button
             className="w-full bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white font-medium cursor-pointer">
             В каталог
