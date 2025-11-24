@@ -11,9 +11,6 @@
 - **TailwindCSS 4**
 - **shadcn/ui** (Radix + Tailwind UI)
 - **Storybook 10** (документирование UI компонентов)
-- **Lucide Icons**
-- **PostCSS, autoprefixer**
-
 ---
 
 ## Установка
