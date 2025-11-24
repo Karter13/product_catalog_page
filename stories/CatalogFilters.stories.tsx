@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CatalogFilters } from "@/app/catalog/components/CatalogFilters";
+import { CatalogFilters } from "@/components/CatalogFilters";
 
 const meta: Meta<typeof CatalogFilters> = {
   title: "Catalog/CatalogFilters",

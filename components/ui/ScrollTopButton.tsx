@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
 
-import { Button } from "./ui/button";
+import { Button } from "./button";
 import { scrollToTop } from '@/lib/utils/scrollToTop';
 
 export function ScrollTopButton() {

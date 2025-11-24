@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Product } from '@/data/types/product';
 import { Button } from '@/components/ui/button';
-import { StarRating } from '@/components/StarRating';
+import { StarRating } from '@/components/ui/StarRating';
 import { Skeleton } from '@/components/ui/skeleton';
 
 interface ProductCardProps {

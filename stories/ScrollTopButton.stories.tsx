@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ScrollTopButton } from '@/components/ScrollTopButton';
+import { ScrollTopButton } from '@/components/ui/ScrollTopButton';
 
 const ScrollWrapper = ({ children }: { children: React.ReactNode }) => (
   <div style={{ height: "2000px", padding: "20px" }}>
