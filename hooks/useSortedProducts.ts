@@ -6,13 +6,7 @@ export type SortType = "default" | "price-asc" | "price-desc" | "alpha";
 export function useSortedProducts(allProducts: Product[]) {
   const [sort, setSort] = useState<SortType>("default");
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "auto" });
-  }, []);
-
-  const handleSortChange = (val: SortType) => {
-    setSort(val);
-  };
+  const handleSortChange = (val: SortType) => setSort(val);
 
   const filteredProducts: Product[] = useMemo(() => {
     const filtered = [...allProducts];
@@ -31,6 +25,10 @@ export function useSortedProducts(allProducts: Product[]) {
 
     return filtered;
   }, [allProducts, sort]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [sort]);
 
   return { filteredProducts, sort, handleSortChange };
 }
